@@ -35,11 +35,5 @@
         generate_ssh_key: yes
       become: yes
       become_method: sudo
-    - name:    
-      route53:
-        state: create
-        zone: azizanemat.de
-        record: wordpress.azizanemat.de
-        type: A
-        ttl: 300
-        value: 35.178.187.27
+    - name:
+    
