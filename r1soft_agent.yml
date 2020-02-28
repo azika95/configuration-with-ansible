@@ -15,6 +15,7 @@
       package:
         name: serverbackup-enterprise-agent 
         state: latest
+      notify: R1soft Restart
 
 
     - name: Power off iptables
