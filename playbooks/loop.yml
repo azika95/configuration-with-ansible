@@ -1,0 +1,19 @@
+---
+- name: Loop
+  hosts: localhost
+  become: true
+  become_method: sudo
+  connection: ssh
+  ignore_errors: false
+  tasks:
+    - name: Loop
+      package:
+        name: "{{item}}"
+        state: present
+      with_items:
+        - httpd
+        - telnet
+        - lftp
+        - unzip
+        - wget 
+        
